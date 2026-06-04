@@ -61,7 +61,7 @@ nav ul li {
 
 article {
 	display: flex;
-    flex: 1;
+	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -72,4 +72,37 @@ button {
 	width: 200px;
 	margin-top: auto;
 	align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+	.content {
+		width: 30%;
+	}
+
+	.articoli .content:nth-child(4) {
+		flex-grow: 1;
+	}
+
+	nav ul {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.articoli .content:nth-child(4) {
+		flex-grow: 0;
+	}
+
+	.articoli .content:nth-child(4), .articoli .content:last-child {
+		margin: 0 40px;
+	}
+
+	.articoli .content:last-child {
+		margin-left: 2.5px;
+	}
+
+	.articoli {
+		gap: 20px 10px;
+	}
 }
